@@ -26,6 +26,10 @@ Kafka Streams and Kafka Client
     These configurations control how Kafka Streams executes queries. These can be provided with the optional ``ksql.streams``
     prefix. For example,  ``ksql.streams.auto.offset.reset`` and ``ksql.streams.cache.max.bytes.buffering``.
 
+    .. important:: Streams configurations specified in the ``ksqlserver.properties`` file are not automatically propagated
+                   to streams apps. To propagate the settings to KSQL and streams, use the ``ksql.core.streams`` prefix for
+                   your configuration. For example, ``auto.offset.reset`` becomes ``ksql.core.streams.auto.offset.reset``.
+
 You can set the following parameters for the KSQL Server only.
 
 Admin Client
